@@ -2019,7 +2019,7 @@ __webpack_require__.r(__webpack_exports__);
 
             var resultAsString = _this.arrayToString(response);
 
-            _this.multipicationRes = resultAsString;
+            _this.multipicationRes = resultAsString.trim();
           }
         },
         error: function error(response) {
@@ -2034,7 +2034,6 @@ __webpack_require__.r(__webpack_exports__);
               }
             }
 
-            console.log(" ++++++++++ ", errorMsgs, _this.errors);
             _this.errors = errorMsgs;
           }
         }
@@ -2044,6 +2043,9 @@ __webpack_require__.r(__webpack_exports__);
       var matrixArray = matrix.split("\n");
 
       for (var i = 0; i < matrixArray.length; i++) {
+        console.log(" 1111111 ", matrixArray[i]);
+        matrixArray[i] = matrixArray[i].trim();
+        console.log(" 222222 ", matrixArray[i]);
         matrixArray[i] = matrixArray[i].split(" ");
       }
 

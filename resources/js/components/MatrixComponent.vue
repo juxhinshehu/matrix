@@ -75,7 +75,7 @@
                         if (response) {
                             this.errors = "";
                             let resultAsString = this.arrayToString(response)
-                            this.multipicationRes = resultAsString;
+                            this.multipicationRes = resultAsString.trim();
                         }
                     },
                     error: (response) => {
@@ -89,7 +89,7 @@
                                     errorMsgs += err + " ";
                                 }
                             }
-                            console.log(" ++++++++++ ", errorMsgs, this.errors)
+                            
                             this.errors = errorMsgs;
                         }
                     },
@@ -98,6 +98,9 @@
             stringToArray (matrix) {
                 let matrixArray = matrix.split("\n");
                 for (var i = 0; i < matrixArray.length; i++) {
+                    console.log(" 1111111 ", matrixArray[i])
+                    matrixArray[i] = matrixArray[i].trim();
+                    console.log(" 222222 ", matrixArray[i])
                     matrixArray[i] = matrixArray[i].split(" ")
                 }
                 return matrixArray;
