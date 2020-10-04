@@ -1988,7 +1988,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {},
   data: function data() {
@@ -2024,7 +2023,7 @@ __webpack_require__.r(__webpack_exports__);
         },
         error: function error(response) {
           if (response) {
-            var errorMsgs = "Error ";
+            var errorMsgs = "Error: ";
             _this.multipicationRes = "";
 
             for (var error in response.responseJSON.errors) {
@@ -37702,7 +37701,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
-            _c("form", { staticClass: "form-horizontal" }, [
+            _c("form", { staticClass: "form-inline" }, [
               _c("div", { staticClass: "form-group" }, [
                 _c(
                   "label",
@@ -37782,7 +37781,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "form-group" }, [
-                _c("div", { staticClass: "col-sm-offset-2 col-sm-10" }, [
+                _c("div", { staticClass: "col-sm-5" }, [
                   _c(
                     "button",
                     {
@@ -37793,14 +37792,6 @@ var render = function() {
                   )
                 ])
               ]),
-              _vm._v(" "),
-              _vm.errors != ""
-                ? _c("div", { staticClass: "form-group alert alert-danger" }, [
-                    _c("label", { staticClass: "control-label col-sm-10" }, [
-                      _vm._v(" " + _vm._s(this.errors) + " ")
-                    ])
-                  ])
-                : _vm._e(),
               _vm._v(" "),
               _c("div", { staticClass: "form-group" }, [
                 _c("label", { staticClass: "control-label col-sm-2" }, [
@@ -37822,7 +37813,15 @@ var render = function() {
                   )
                 ])
               ])
-            ])
+            ]),
+            _vm._v(" "),
+            _vm.errors != ""
+              ? _c("div", { staticClass: "alert alert-danger" }, [
+                  _c("label", { staticClass: "control-label col-sm-10" }, [
+                    _vm._v(" " + _vm._s(this.errors) + " ")
+                  ])
+                ])
+              : _vm._e()
           ])
         ])
       ])
